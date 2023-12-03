@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DebRL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>HttpAnimations</h1>
+        <p>Switching to <a href="https://www.debian.org/" target="_blank">Debian 12</a></p>
+    </header>
+
+    <section id="Buttons">
+        <h2>Site navigation</h2>
+        <a href="#Buttons">Buttons</a> |
+        <a href="#WhyAmSwitching">Why am switching?</a> |
+        <a href="#GettingTheISO">Getting the ISO</a> |
+        <a href="#Installing">Installing</a> |
+        <a href="#InstallNVidiaDriversGuide">Install NVidia drivers guide</a> |
+    </section>
+    
+    <section id="WhyAmSwitching">
+        <h2>Why am switching?</h2>
+        <p>I am comeing over from <a href="https://pop.system76.com/" target="_blank">Pop_OS!</a> witch was my main distro fro three years+ but having a distro installed for that long conbined with mass amounts of java, php, python3 and bash scripts all over the place makes it really hard to find stuff or not always be running out of stoarge I also just wanted a fresh start so as <em>Sat 2nd Dec</em> I have switched over to <a href="https://www.debian.org/" target="_blank">Debian</a>.</p>
+    </section>
+
+    <section id="GettingTheISO">
+        <h2>Getting the ISO</h2>
+        <p>Now normally getting a ISO for a distro is not that hard you just go the website or Github go to downloads find 64-bit or 32-bit and click download then burn it but for some reason with <a href="https://www.debian.org/" target="_blank">Debian</a> they make it so hard to get a is.</p>
+        <p>When I went to the <a href="https://www.debian.org/" target="_blank">Debian</a> site for the first time I was very much lost on the download page there wore like a million mirrors and when clicking on a mirror it will should a bunch of folders I had no idea what it means but I downloaded some random ISO off the site from a server in the US witch took like two years to download becuase I got top tier 30mb Ireland ethernite but once I had the ISO I burnt it to a usb drive using <a href="https://www.ventoy.net" target="_blank">Ventoy</a> and booted it with normal mode</p>
+    </section>
+
+    <section id="Installing">
+        <h2>Installing</h2>
+        <p>Getting <a href="https://www.debian.org/" target="_blank">Debian</a> installed was quite easy I used the gui but there wore some parts I had no idea what I was doing a good example is that is will ask you for a domain name witch I don't have one so I just skipped and besieds that I made my accounts installed <a href="https://kde.org/" target="_blank"></a>KDE Desktop</a> and not gnome and went on with my install with no issues.</p>
+    </section>
+
+    <section id="NVidia">
+        <h2><a href="https://www.nvidia.com/en-us/" target="_blank">NVidia</a></h2>
+        <p>If you don't know <a href="https://www.nvidia.com/en-us/" target="_blank">NVidia</a> makes GPU's and there GPU's are really fast and good but getting the real drivers on linux is a huge pain in the ass, Now some distro like <a href="https://pop.system76.com/" target="_blank">Pop_OS!</a> have a ISO with built in <a href="https://www.nvidia.com/en-us/" target="_blank">NVidia</a> drivers but a ton of ditros don't mainly because <a href="https://www.nvidia.com/en-us/" target="_blank">NVidia</a> drivers are not open source so I had to install my own and here are my issues I found on the way.</p>
+        <p>First of all my first issue is that my displays in <a href="https://kde.org/" target="_blank">KDE Desktop</a> where being really slow around 5-10 fps and I had to you know fix that but becuase I could not use a web browser to download anything I was forced in to terminal mode and then had to go onto another pc and write a drivers download script for my pc and then upload that to github and git clone it onto my pc but before I was doing that I kept trying to mount a usb drive with the drivir on it witch I was able to do but for some reason I could not run the file after moving it. Then I had to open a conf file to make it so the nouvea drivers could not load witch took a lot of tries because I could not get sudo working just write and has to use su - to enter sudo for sum reason and not su normaly.</p>
+    </section>
+
+    <section id="InstallNVidiaDriversGuide">
+        <h2>Install <a href="https://www.nvidia.com/en-us/" target="_blank">NVidia</a> drivers guide</h2>
+        <p>This guide will go over how I got my <a href="https://www.nvidia.com/en-us/" target="_blank">NVidia</a> drivers working and installed I have used a RTX 3060TI while using <a href="https://www.debian.org/" target="_blank">Debian 12</a> and <a href="https://kde.org/" target="_blank">KDE Desktop</a></p>
+        <p>1) Install the <a href="https://www.nvidia.com/en-us/" target="_blank">NVidia</a> driver from <a href="https://www.nvidia.com/en-us/" target="_blank">NVidia's</a> website it should be a .run file and make sure it's in like you're downloads folder.</p>
+        <p>For step two use you're Iphone, Lynx or another anything with a web browser.</p>
+        <p>2) Open a Terminal mode by clicking <code>Ctrl+Alt+F2</code> and enter sign into with you're account.</p>
+        <p>3) Log into into sudo mode by typeing <code>su</code> then enter the password for you're sudo account and hit enter.</p>
+        <p>4) While in sudo mode type <iframe src="sudo-tee-command.txt" width="90%" height="35px" frameborder="0"></iframe></p>
+        <p>5) Once you are in that command you need to type ignore the > as that is just means a start command and to make a new line do <code>Ctrl+Enter</code>.<iframe src="sudo-tee-command-info.txt" width="90%" height="60px" frameborder="0"></iframe></p>
+        <p>6) Now you gotta insall from prerequisites first you need some headers <iframe src="apt install linux-headers-amd64.txt" width="90%" height="35px" frameborder="0"></iframe></p>
+        <p>6.1) Now you need gcc I think this is cudo I have no idea but the installer won't work with out this.<iframe src="apt install build-essential.txt" width="90%" height="35px" frameborder="0"></iframe></p>
+        <p>7) Now you gotta make sure everything is updated I would also recommand rebooting but it's not needed <iframe src="apt-get update.txt" width="90%" height="35px" frameborder="0"></iframe></p>
+        <p>8) now you can finally run the installer for the driver to do this cd into the dir were you have that .run file you downloaded and then run the following commands make sure to replace the <code>file-name</code> with the name of you're file. <iframe src="Run-NV-Commands.txt" width="90%" height="65px" frameborder="0"></iframe></p>
+        <p>9) Now you can reboot and KDE should show up and you are free to use you're pc.</p>
+    </section>
+</body>
+</html>

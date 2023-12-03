@@ -1,0 +1,1 @@
+cat <<EOF | sudo tee /etc/modprobe.d/blacklist-nouveau.conf
