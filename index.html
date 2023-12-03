@@ -20,6 +20,7 @@
         <a href="#GettingTheISO">Getting the ISO</a> |
         <a href="#Installing">Installing</a> |
         <a href="#InstallNVidiaDriversGuide">Install NVidia drivers guide</a> |
+        <a href="#DPKGIssues">DPKG issues</a> |
     </section>
     
     <section id="WhyAmSwitching">
@@ -58,6 +59,17 @@
         <p>7) Now you gotta make sure everything is updated I would also recommand rebooting but it's not needed <iframe src="apt-get update.txt" width="90%" height="35px" frameborder="0"></iframe></p>
         <p>8) now you can finally run the installer for the driver to do this cd into the dir were you have that .run file you downloaded and then run the following commands make sure to replace the <code>file-name</code> with the name of you're file. <iframe src="Run-NV-Commands.txt" width="90%" height="65px" frameborder="0"></iframe></p>
         <p>9) Now you can reboot and KDE should show up and you are free to use you're pc.</p>
+    </section>
+
+    <section id="DPKGIssues">
+        <h2>DPKG issues</h2>
+        <p>If you don't know what DPKG is it's the way you install a deb file from the terminal so if a app is not on the app store you go to the website download the deb file for it and either open it in terminal with.</p>
+        <iframe src="dpkg -i" width="90%" height="36px" frameborder="0"></iframe>
+        <p>Or you open it in anything that can install a .deb for an example Eddy and pretty much every app store ever.</p>
+        <p>Now my issue is that when ever trying to install a .deb file I would run my commands like this</p>
+        <iframe src="command-I-used.txt" width="90%" height="60px" frameborder="0"></iframe>
+        <p>And doing that would throw an error saying it could not find a path for dpkg and I read online I had to reinstall my whole OS but I really did not want to go throw all agian that mainly <a href="#InstallNVidiaDriversGuide" target="_blank">Installing the NVidia drivers</a> witch took around five hous to get to the point were I could even install it so what I did is that I spent a few errors looking throw a ton of <a href="https://www.reddit.com/r/linuxquestions/" target="_blank">r/linuxquestions</a> posts and until I found a comment about installing a audio codac and that comment said use <code>su -</code>and that would fix it and you know what it did so over three hours for on stupid - symbol so if you ever install a .deb file using the dpkg and the terminal use the following command.</p>
+        <iframe src="commandiused" width="90%" height="60px" frameborder="0"></iframe>
     </section>
 </body>
 </html>
