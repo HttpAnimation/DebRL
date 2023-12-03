@@ -22,3 +22,29 @@ Feel free to contribute by suggesting improvements, fixing typos, or adding valu
 If you encounter issues with the website or have questions, please open an issue on the GitHub repository.
 
 Thank you for visiting the DebRL website! We hope you find the information helpful in your Linux journey.
+
+## Installing
+If you would like to have a local download of this site open a terminal and run the following comamnds.
+1) Install git this is only needed if you don't have git downlaoded.
+    ```
+    apt install git
+    ```
+2) Download the page
+    ```
+    git clone https://github.com/HttpAnimation/DebRL.git
+    ```
+3) CD into the site
+    ```
+    cd DebRL
+    ```
+# Hosting
+If you would like to host a live page make sure you first have the site downloaded by reading [Installing](#Installing).
+
+1) Allow the script to run
+    ```
+    chmod +x Server.sh
+    ```
+2) Run the script with
+    ```
+    ./Server.sh
+    ```
